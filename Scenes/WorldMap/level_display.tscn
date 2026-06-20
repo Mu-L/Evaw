@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc14s1gwiqgon"]
+[gd_scene format=3 uid="uid://dc14s1gwiqgon"]
 
 [ext_resource type="Script" uid="uid://402i6yqtm5hw" path="res://Scripts/WorldMap/level_display.gd" id="1_84eer"]
 [ext_resource type="Texture2D" uid="uid://dhfts4osar8nj" path="res://Assets/UI/textbox2.png" id="1_idunx"]
@@ -90,14 +90,14 @@ _data = {
 &"fade_out": SubResource("Animation_jhhlx")
 }
 
-[node name="level_display" type="Node2D"]
+[node name="level_display" type="Node2D" unique_id=284380599]
 script = ExtResource("1_84eer")
 
-[node name="everything" type="Node2D" parent="."]
+[node name="everything" type="Node2D" parent="." unique_id=370281213]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(0, 12)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="everything"]
+[node name="NinePatchRect" type="NinePatchRect" parent="everything" unique_id=1559120802]
 offset_left = -29.0
 offset_top = -16.0
 offset_right = 29.0
@@ -108,7 +108,7 @@ patch_margin_top = 1
 patch_margin_right = 1
 patch_margin_bottom = 1
 
-[node name="level_number" type="Label" parent="everything"]
+[node name="level_number" type="Label" parent="everything" unique_id=861075676]
 offset_left = -34.0
 offset_top = -19.0
 offset_right = 6.0
@@ -119,7 +119,7 @@ text = "Level 1"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="level_name" type="Label" parent="everything"]
+[node name="level_name" type="Label" parent="everything" unique_id=320595048]
 offset_left = -27.0
 offset_top = -10.0
 offset_right = 27.0
@@ -132,44 +132,43 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="single feather" type="Node2D" parent="everything"]
+[node name="single feather" type="Node2D" parent="everything" unique_id=1479018313]
 
-[node name="feather_outline" type="Sprite2D" parent="everything/single feather"]
+[node name="feather_outline" type="Sprite2D" parent="everything/single feather" unique_id=1233357591]
 position = Vector2(20, -9)
 texture = ExtResource("1_w5mcf")
 
-[node name="feather_inline" type="Sprite2D" parent="everything/single feather"]
+[node name="feather_inline" type="Sprite2D" parent="everything/single feather" unique_id=387775063]
 position = Vector2(20, -9)
 texture = ExtResource("4_84eer")
 
-[node name="triple feather" type="Node2D" parent="everything"]
+[node name="triple feather" type="Node2D" parent="everything" unique_id=1786901139]
 visible = false
 
-[node name="feather_outline" type="Sprite2D" parent="everything/triple feather"]
+[node name="feather_outline" type="Sprite2D" parent="everything/triple feather" unique_id=87974635]
 position = Vector2(2, -9)
 texture = ExtResource("1_w5mcf")
 
-[node name="triple_feather_inline" type="Sprite2D" parent="everything/triple feather"]
+[node name="triple_feather_inline" type="Sprite2D" parent="everything/triple feather" unique_id=2039041352]
 position = Vector2(2, -9)
 texture = ExtResource("4_84eer")
 
-[node name="feather_outline2" type="Sprite2D" parent="everything/triple feather"]
+[node name="feather_outline2" type="Sprite2D" parent="everything/triple feather" unique_id=222629393]
 position = Vector2(12, -9)
 texture = ExtResource("1_w5mcf")
 
-[node name="triple_feather_inline2" type="Sprite2D" parent="everything/triple feather"]
+[node name="triple_feather_inline2" type="Sprite2D" parent="everything/triple feather" unique_id=789282015]
 position = Vector2(12, -9)
 texture = ExtResource("4_84eer")
 
-[node name="feather_outline3" type="Sprite2D" parent="everything/triple feather"]
+[node name="feather_outline3" type="Sprite2D" parent="everything/triple feather" unique_id=1143516260]
 position = Vector2(22, -9)
 texture = ExtResource("1_w5mcf")
 
-[node name="triple_feather_inline3" type="Sprite2D" parent="everything/triple feather"]
+[node name="triple_feather_inline3" type="Sprite2D" parent="everything/triple feather" unique_id=1611388210]
 position = Vector2(22, -9)
 texture = ExtResource("4_84eer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_84eer")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1761179374]
+libraries/ = SubResource("AnimationLibrary_84eer")
+autoplay = &"fade_in"

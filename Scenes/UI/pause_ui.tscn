@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhxrfxl1y1xdq"]
+[gd_scene format=3 uid="uid://bhxrfxl1y1xdq"]
 
 [ext_resource type="Script" uid="uid://ccp4rutk43hj6" path="res://Scripts/UI/pause_menu.gd" id="1_pr555"]
 [ext_resource type="Texture2D" uid="uid://c3txmui8m2di6" path="res://Assets/Backgrounds/tentative backg.png" id="2_8dpcc"]
@@ -14,8 +14,7 @@
 
 [sub_resource type="Theme" id="Theme_r5twg"]
 
-[node name="PauseUI" type="Control"]
-visible = false
+[node name="PauseUI" type="Control" unique_id=1748993940]
 z_index = 4096
 layout_mode = 3
 anchors_preset = 8
@@ -28,12 +27,12 @@ grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_pr555")
 
-[node name="TentativeBackg" type="Sprite2D" parent="."]
+[node name="TentativeBackg" type="Sprite2D" parent="." unique_id=813686]
 position = Vector2(3.8146973e-06, -3.8146973e-06)
 scale = Vector2(0.53333336, 0.4)
 texture = ExtResource("2_8dpcc")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=48849397]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,13 +46,13 @@ offset_bottom = 55.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=537862597]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=720435153]
 layout_mode = 2
 
-[node name="TITLE" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="TITLE" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1133624641]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8784314, 0.827451, 0.78431374, 1)
 theme_override_fonts/font = ExtResource("3_qjk66")
@@ -61,7 +60,7 @@ theme_override_font_sizes/font_size = 14
 text = "PAUSE"
 horizontal_alignment = 1
 
-[node name="RESUME" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="RESUME" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2062136033]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
@@ -80,7 +79,7 @@ button_mask = 5
 text = "  RESUME"
 alignment = 0
 
-[node name="OPTIONS" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="OPTIONS" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1673962856]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_r5twg")
@@ -98,7 +97,7 @@ theme_override_icons/icon = ExtResource("5_rqg0w")
 text = "  OPTIONS"
 alignment = 0
 
-[node name="QUIT" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="QUIT" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1621129820]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.8784314, 0.827451, 0.78431374, 1)
@@ -117,32 +116,32 @@ text = "  QUIT TO WORLD MAP
 alignment = 0
 text_overrun_behavior = 1
 
-[node name="DeathCoutner" parent="." instance=ExtResource("7_1yf2f")]
+[node name="DeathCoutner" parent="." unique_id=1336650716 instance=ExtResource("7_1yf2f")]
 layout_mode = 1
 offset_left = -80.0
 offset_top = -60.0
 offset_right = -80.0
 offset_bottom = -60.0
 
-[node name="FeatherCounter" parent="." instance=ExtResource("8_j4q0y")]
+[node name="FeatherCounter" parent="." unique_id=1734844857 instance=ExtResource("8_j4q0y")]
 layout_mode = 1
 offset_left = 58.0
 offset_top = 46.0
 offset_right = 58.0
 offset_bottom = 46.0
 
-[node name="SpeedrunTimer" parent="." instance=ExtResource("7_8dpcc")]
+[node name="SpeedrunTimer" parent="." unique_id=1149763881 instance=ExtResource("7_8dpcc")]
 layout_mode = 1
 offset_left = -80.0
 offset_top = -60.0
 offset_right = -80.0
 offset_bottom = -60.0
 
-[node name="OptionsUI" parent="." instance=ExtResource("8_qjk66")]
+[node name="OptionsUI" parent="." unique_id=1301519941 instance=ExtResource("8_qjk66")]
 visible = false
 layout_mode = 1
 
-[node name="UiMouseClick" type="AudioStreamPlayer" parent="."]
+[node name="UiMouseClick" type="AudioStreamPlayer" parent="." unique_id=1037082787]
 stream = ExtResource("11_lsyt1")
 volume_db = -15.0
 
